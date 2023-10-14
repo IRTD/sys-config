@@ -1,0 +1,17 @@
+# export paths and env vars
+export NIXCONF="/etc/nixos/configuration.nix"
+export PATH=$PATH:~/.cargo/bin/
+
+alias vnixc="sudo nvim $NIXCONF"
+alias v="nvim"
+alias c="clear"
+alias .="ls"
+alias ls="exa -1laB --git"
+alias debx="dpkg -x $1 $2"
+alias nap="nix-env -qaP $1"
+alias x="exit"
+
+shopt -s autocd
+
+eval "$(zoxide init bash)"
+eval "$(starship init bash)"
